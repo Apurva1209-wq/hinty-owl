@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hinty the Owl – Your Hint Buddy</title>
+<link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+<div class="bubbles" aria-hidden="true"><span>➕</span><span>🔬</span><span>📖</span><span>🌍</span><span>✏️</span><span>⭐</span></div>
+
+<main class="app">
+  <header>
+    <div class="owl" id="owl">🦉</div>
+    <div class="title">
+      <h1>Hinty the Owl</h1>
+      <p>Ask me anything. I'll give you a <b>hint</b>, and YOU find the answer! 🎉</p>
+    </div>
+    <div class="stars" title="Hints collected">⭐ <span id="stars">0</span></div>
+  </header>
+
+  <section class="pickers">
+    <label>My class
+      <select id="grade">
+        <option value="6">6</option><option value="7">7</option><option value="8">8</option>
+        <option value="9">9</option><option value="10">10</option>
+      </select>
+    </label>
+    <div class="chips" id="subjects">
+      <button type="button" class="chip active" data-s="Maths">➕ Maths</button>
+      <button type="button" class="chip" data-s="Science">🔬 Science</button>
+      <button type="button" class="chip" data-s="English">📖 English</button>
+      <button type="button" class="chip" data-s="Social Science">🌍 Social</button>
+    </div>
+  </section>
+
+  <section id="chat" class="chat" aria-live="polite">
+    <div class="msg bot">Hi friend! 👋 I'm Hinty. Type a question below and I'll help you think it through!</div>
+  </section>
+
+  <div class="levels" id="levels" hidden>
+    <span>Need more help?</span>
+    <button type="button" data-l="2">💡 Bigger hint</button>
+    <button type="button" data-l="3">🪜 Step-by-step</button>
+  </div>
+
+  <form id="askForm" class="inputbar" autocomplete="off">
+    <input id="q" name="q" type="text" placeholder="Type your question here… e.g. How do I solve 2x + 5 = 11?" maxlength="500">
+    <button id="send" type="submit">Get Hint 🚀</button>
+  </form>
+  <div class="status" id="status">Checking Hinty's brain… 🧠</div>
+</main>
+
+<script src="config.js?v=2"></script>
+<script src="app.js?v=2"></script>
+</body>
+</html>
